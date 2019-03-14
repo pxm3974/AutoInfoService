@@ -4,8 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.example.AutoDealer.controllers.DealerRepository;
-import com.example.AutoDealer.controllers.InventoryRepository;
+
 import com.example.AutoDealer.models.DealerInventory;
 import com.example.AutoDealer.models.DealerModel;
 

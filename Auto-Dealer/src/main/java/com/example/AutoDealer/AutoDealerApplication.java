@@ -10,10 +10,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
 
-import com.example.AutoDealer.controllers.DealerRepository;
-import com.example.AutoDealer.controllers.InventoryRepository;
 import com.example.AutoDealer.models.DealerInventory;
 import com.example.AutoDealer.models.DealerModel;
+import com.example.AutoDealer.services.DealerRepository;
+import com.example.AutoDealer.services.InventoryRepository;
 
 @SpringBootApplication
 @EnableAutoConfiguration

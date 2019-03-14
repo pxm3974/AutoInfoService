@@ -1,4 +1,4 @@
-package com.example.AutoDealer.controllers;
+package com.example.AutoDealer.services;
 
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
