@@ -15,7 +15,10 @@ import com.example.AutoDealer.models.DealerInventory;
 import com.example.AutoDealer.models.DealerModel;
 import com.example.AutoDealer.services.DealerService;
 
+import io.swagger.annotations.Api;
+
 @RestController
+@Api("Dealer Management Controller")
 public class DealerController {
 	
 	@Autowired

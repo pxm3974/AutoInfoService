@@ -1,4 +1,4 @@
-package com.example.AutoDealer.controllers;
+package com.example.AutoDealer.services;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
