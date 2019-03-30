@@ -16,6 +16,8 @@ import com.example.AutoDealer.models.DealerModel;
 import com.example.AutoDealer.services.DealerService;
 
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.*;
 
 @RestController
 @Api("Dealer Management Controller")
@@ -24,12 +26,22 @@ public class DealerController {
 	@Autowired
 	DealerService dealerService;
 	
+	@ApiOperation(value="view list of dealers and their inventory, response=List.class")
+	
+	@ApiResponses(value= {
+			@ApiResponse(code=200, message="Successfully retrieved list"),
+			@ApiResponse(code=401, message="You are not authorized to view the resource"),
+			@ApiResponse(code=403, message="Accessing the resource you were trying to reach is forbidden"),
+			@ApiResponse(code=404, message="The resource you were trying to reach is not found")
+	})
+	
 	@RequestMapping(value="/cars/dealers", method=RequestMethod.GET)
 	public List<DealerModel> getAllDealers()
 	{
 		return dealerService.getAllDealers();
 	}
 	
+	@ApiOperation(value="Search a dealer info with dealer Name", response=DealerModel.class)
 	@RequestMapping(value="/cars/dealers/{dealerName}", method=RequestMethod.GET)
 	public DealerModel getDealer(@PathVariable("dealerName") String dealerName)
 	{
